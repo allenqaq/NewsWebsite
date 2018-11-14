@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="2.5" xmlns="http://java.sun.com/xml/ns/javaee"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee 
+	http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd">
+	<servlet>
+		<description>This is the description of my J2EE component</description>
+		<display-name>This is the display name of my J2EE component</display-name>
+		<servlet-name>newsServlet</servlet-name>
+		<servlet-class>newsServlet.newsServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<description>This is the description of my J2EE component</description>
+		<display-name>This is the display name of my J2EE component</display-name>
+		<servlet-name>indexServlet</servlet-name>
+		<servlet-class>newsServlet.indexServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<description>This is the description of my J2EE component</description>
+		<display-name>This is the display name of my J2EE component</display-name>
+		<servlet-name>FocusServlet</servlet-name>
+		<servlet-class>newsServlet.FocusServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<description>This is the description of my J2EE component</description>
+		<display-name>This is the display name of my J2EE component</display-name>
+		<servlet-name>NoticeServlet</servlet-name>
+		<servlet-class>newsServlet.NoticeServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<description>This is the description of my J2EE component</description>
+		<display-name>This is the display name of my J2EE component</display-name>
+		<servlet-name>managerServlet</servlet-name>
+		<servlet-class>newsServlet.managerServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<description>This is the description of my J2EE component</description>
+		<display-name>This is the display name of my J2EE component</display-name>
+		<servlet-name>fNewsServlet</servlet-name>
+		<servlet-class>newsServlet.fNewsServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<description>This is the description of my J2EE component</description>
+		<display-name>This is the display name of my J2EE component</display-name>
+		<servlet-name>backAllNews</servlet-name>
+		<servlet-class>newsServlet.backAllNews</servlet-class>
+	</servlet>
+	<servlet>
+		<description>This is the description of my J2EE component</description>
+		<display-name>This is the display name of my J2EE component</display-name>
+		<servlet-name>SortServlet</servlet-name>
+		<servlet-class>newsServlet.SortServlet</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>newsServlet</servlet-name>
+		<url-pattern>/servlet/newsServlet</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>indexServlet</servlet-name>
+		<url-pattern>/indexServlet</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>FocusServlet</servlet-name>
+		<url-pattern>/servlet/FocusServlet</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>NoticeServlet</servlet-name>
+		<url-pattern>/servlet/NoticeServlet</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>managerServlet</servlet-name>
+		<url-pattern>/servlet/managerServlet</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>fNewsServlet</servlet-name>
+		<url-pattern>/servlet/fNewsServlet</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>backAllNews</servlet-name>
+		<url-pattern>/servlet/backAllNews</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>SortServlet</servlet-name>
+		<url-pattern>/servlet/SortServlet</url-pattern>
+	</servlet-mapping>
+	<filter>
+		<filter-name>CharEncoding</filter-name>
+		<filter-class>newsServlet.CharEncoding</filter-class>
+	</filter>
+	<filter-mapping>
+		<filter-name>CharEncoding</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
+	  <filter>
+  <filter-name>CheckLogin</filter-name>
+  <filter-class>newsServlet.CheckLogin</filter-class>
+  </filter>
+  <filter-mapping>
+  <filter-name>CheckLogin</filter-name>
+  <url-pattern>/background.jsp</url-pattern>
+  </filter-mapping>
+   <filter-mapping>
+  <filter-name>CheckLogin</filter-name>
+  <url-pattern>/bNews/*</url-pattern>
+  </filter-mapping>
+   <filter-mapping>
+  <filter-name>CheckLogin</filter-name>
+  <url-pattern>/bAffiche/*</url-pattern>
+  </filter-mapping>
+   <filter-mapping>
+  <filter-name>CheckLogin</filter-name>
+  <url-pattern>/bForce/*</url-pattern>
+  </filter-mapping>
+   <filter-mapping>
+  <filter-name>CheckLogin</filter-name>
+  <url-pattern>/bSort/*</url-pattern>
+  </filter-mapping>
+   <filter-mapping>
+  <filter-name>CheckLogin</filter-name>
+  <url-pattern>/bManager/*</url-pattern>
+  </filter-mapping>
+   <filter-mapping>
+  <filter-name>CheckLogin</filter-name>
+  <url-pattern>/bImage/*</url-pattern>
+  </filter-mapping>
+
+	<welcome-file-list>
+		<welcome-file>index.jsp</welcome-file>
+	</welcome-file-list>
+<jsp-config>
+	<taglib> 
+     <taglib-uri>http://java.sun.com/jsp/jstl/fmt</taglib-uri> 
+     <taglib-location>/WEB-INF/tlds/fmt-rt.tld</taglib-location> 
+ </taglib>
+</jsp-config>
+</web-app>
